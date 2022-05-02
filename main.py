@@ -9,8 +9,11 @@ class SubrectangleQueries:
     def getValue(self, row: int, col: int) -> int:
         return self.rectangle[row][col]
         
-
-
+def strLength(string):
+    length = 0
+    for x in range(string):
+        length += 1
+    return length
 # Your SubrectangleQueries object will be instantiated and called as such:
 # obj = SubrectangleQueries(rectangle)
 # obj.updateSubrectangle(row1,col1,row2,col2,newValue)
