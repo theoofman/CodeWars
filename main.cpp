@@ -6,5 +6,6 @@ int main(){
     std::cout << x << std::endl;
     x++;
   }
+  print(intentional error);
   return 0;
 }
