@@ -1,20 +1,17 @@
-class SubrectangleQueries:
-
-    def __init__(self, rectangle: list[list[int]]):
-        self.rectangle = rectangle
-
-    def updateSubrectangle(self, row1: int, col1: int, row2: int, col2: int, newValue: int) -> None:
-        self.rectangle[row1:row2 + 1, col1:col2 + 1] = newValue
-
-    def getValue(self, row: int, col: int) -> int:
-        return self.rectangle[row][col]
-        
-def strLength(string):
-    length = 0
-    for x in range(string):
-        length += 1
-    return length
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)
+def binToDec(bin):
+    bin = str(bin)
+    dec = 0
+    for i in range(len(bin)):
+        dec += int(bin[i]) * 2 ** (len(bin) - i - 1)
+    return dec
+def decToBin(dec):
+    bin = ""
+    while dec > 0:
+        bin = str(dec % 2) + bin
+        dec = dec // 2
+    return bin
+def doNothing(obj):
+    return binToDec(decToBin(obj))
+def assertInverse(f1,f2,x):
+    return f1(f2(x)) == x
+print(lambda x: x*3)
